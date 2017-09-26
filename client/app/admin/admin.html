@@ -1,0 +1,32 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+  <form name="myForm">
+ <h3>Enter room number:<input type="number" name="Input" min="0" ng-model="roomNum" class="form-control" style="width: 70px;display: inline" required></h3>
+  <div class="alert alert-danger fade in" ng-show="warn">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>OOPS!</strong> Room already in use! <br>Select other number please.
+  </div>
+  <h3>Select Category:<select ng-model="category" style="display: inline;width: 150px" name="myselect" required class="form-control" ng-disabled="!myForm.Input.$valid" ng-change="lolo(category)">
+    <option ng-repeat="x in categories" value="{{x.name}}">{{x.name}}</option>
+  </select></h3>
+  <div><br>
+    <button class="btn btn-danger" ng-click="createRoom()" ng-disabled="thisis" style="margin-left: 220px" >Create room</button>
+ <br>
+  </div>
+  <br>
+  </form>
+</div>
+<script type="text/ng-template" id="myModalContent2.html">
+  <div class="modal-header">
+    <i>Hola!</i>
+  </div>
+  <div class="modal-body">
+    <i>Submitted successfully</i>
+    </select>
+    </span>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" type="button" ng-click="apply()">OK</button>
+  </div>
+</script>

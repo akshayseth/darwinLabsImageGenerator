@@ -1,0 +1,32 @@
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl" style="color:black">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/search" class="navbar-brand" style="vertical-align:middle"><span class="glyphicon glyphicon-file"> Darwin Image Generator</span></a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
+        <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar sidebar-inverse" ng-show="isLoggedIn()" >
+    <ul>
+      <li ng-show="isLoggedIn()" >
+        <a href="/search"><span class="glyphicon glyphicon-search"></span><br>Search Images</a>
+      </li>
+      <li ng-show="isLoggedIn()" >
+        <a href="/key_search"><span class="glyphicon glyphicon-user"></span><br>My searched Items</a>
+      </li>
+    </ul>
+  </div>
+</div>

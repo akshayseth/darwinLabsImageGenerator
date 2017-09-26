@@ -1,0 +1,11 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+  <div class="col-md-12" style="padding-left:9%">
+   <!-- <div ng-repeat="x in data.url_details">
+    <img ng-src="/api/getImages?urls={{x.name}}" width="256" height="256">
+    </div>-->
+
+      <div class="col-md-3" data-ng-repeat="x in data.url_details" style="padding:1%">
+        <img data-ng-src="/api/getImages?urls={{x.name}}" style="display: inline"/>
+      </div>
+  </div>

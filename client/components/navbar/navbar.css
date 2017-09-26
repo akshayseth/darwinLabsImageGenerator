@@ -1,0 +1,57 @@
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+.navbar{margin-bottom: 10px;background-color: #151515;border-bottom: 1px solid #2f2f2f;color: #e4e4e4;}
+.navbar-brand{padding: 9px 0;}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.sidebar{
+  width: 70px;
+  border-right: 1px solid #2f2f2f!important;
+  position: fixed;
+  left:0;
+  background: #151515;
+  z-index: 200;
+  top:0;
+  height: 100%;
+}
+.sidebar>ul{
+  padding-top: 50px;
+  padding-left: 0px;
+}
+.sidebar>ul>li {
+  text-align: center;
+  display: block;
+  position: relative;
+  padding: 6px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sidebar>ul>li a{
+  color: #777;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 110%;
+  position: relative;
+  z-index: 200;
+  border-left: 0px solid transparent;
+  line-height: 13px;
+  text-decoration: none;
+  display: block;
+}
+.sidebar>ul>li a:hover{
+  border-left-color: #5fb4ef;
+  opacity: 1;
+  color: #fff;
+}
+.sidebar>ul>li.active a{
+  border-left-color: #5fb4ef;
+  opacity: 1;
+  color: #fff;
+}
+.sidebar>ul>li span{
+  font-size: 175%;
+}
